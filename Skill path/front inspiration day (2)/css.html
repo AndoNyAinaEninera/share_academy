@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS excercises</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            --primaryColor: #305CDE;
+            --secondaryColor: #0096ff;
+            font-family: Calibri, sans-serif;
+        }
+
+        h1, h2 {
+            display: inline-flex;
+            padding: 0.5em 0.8em;
+            color: white;
+            background: var(--primaryColor);
+        }
+
+        article {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        nav ol {
+            padding: 0 0 0 1.2em;
+            margin: 0;
+            columns: 2;
+            column-gap: 1em;
+            max-width: 500px;
+        }
+        
+        nav a {
+            color: var(--primaryColor);
+            line-height: 1.5;
+        }
+
+        section {
+            margin-top: 2em;
+            border-top: 2px solid var(--secondaryColor);
+        }
+
+        code {
+            display: block;
+            padding: 1em;
+            font-family: monospace,sans-serif;
+            background: #ccc;
+        }
+
+        code + code {
+            margin-top: 1em;
+        }
+
+        .box {
+            max-width: 15rem;
+            padding: 0.5em;
+            margin-bottom: 1em;
+            border: 2px solid blueviolet;
+            background: aliceblue;
+        }
+
+        .box-inverse {
+            max-width: 15rem;
+            padding: 0.5em;
+            margin-bottom: 1em;
+            border: 2px solid aliceblue;
+            background: blueviolet;
+            color: aliceblue;
+        }
+
+        .docs {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5em;
+            color: var(--primaryColor);
+        }
+
+        .docs::before {
+            content: '';
+            width: 1em;
+            height: 1em;
+            background: var(--secondaryColor);
+            border-radius: 50%;
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+        input {
+            display: block;
+            height: 40px;
+            padding: 0 1em;
+            margin-bottom: 1em;
+            font-size: 16px;
+        }
+
+        details {
+            margin-top: 2em;
+        }
+    </style>
+</head>
+<body>    
+    <article>
+        <h1>CSS excercises</h1>
+
+        <p><strong>Create a style.css file and place it in the same directory as this css.html file.</strong></p>
+
+        <p>Follow the instructions during each step. Need help, raise your hand and ask the teachers.</p>
+
+        <nav>
+            <ol>
+                <li><a href="#element-selector">Element selectors</a></li>
+                <li><a href="#class-selector">Class selector</a></li>
+                <li><a href="#descendant-selector">Descendant selector</a></li>
+                <li><a href="#cascade">Cascade</a></li>
+                <li><a href="#sizing">Sizing</a></li>
+                <li><a href="#colors">Colors</a></li>
+                <li><a href="#fonts">Fonts</a></li>
+                <li><a href="#images">Images</a></li>
+                <li><a href="#flexbox">Flexbox</a></li>
+                <li><a href="#grid">Grid</a></li>
+            </ol>
+        </nav>
+        <section id="element-selector">
+            <h2>Use element selectors</h2>
+            
+            <p><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors" target="_blank" class="docs">Documentation</a></p>
+            <ol>
+                <li>Style this list so that the text is bold</li>
+                <li>Also make it jump a bit to the left, by adding padding or margin</li>
+                <li>I would also like to have a border and a background color</li>
+            </ol>
+            <blockquote>This blockquote would like a colored background, larger text and a border on the left side</blockquote>
+            <p>This is a paragraph with a <a href="https://www.nos.nl">link</a> that needs an underline and a different color.</p>
+            
+            <details>
+                <summary>Hint</summary>
+                <code>
+                    ol {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;font-weight: bold;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;margin-left: 2em;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;background: aliceBlue;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;border: 2px solid blueviolet;<br>
+                    }<br><br>
+
+                    blockquote {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;font-size: 2em;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;background: aliceBlue;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;border-left: 2px solid blueviolet;<br>
+                    }<br><br>
+
+                    a {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;color: blueviolet;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;text-decoration: underline;<br>
+                    }
+                </code>
+            </details>
+        </section>
+
+        <section id="class-selector">
+            <h2>Use class selectors</h2>
+
+            <p>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Class_selectors" target="_blank" class="docs">Documentation</a><br>
+                <a href="https://cssgradient.io/" target="_blank" class="docs">CSS gradients</a>
+            </p>
+
+            
+            <p class="bigger-paragraph">This paragraph would like a bigger text, but only this paragraph not all the paragraphs on this page</p>
+
+            <div class="media-text">
+                <figure>
+                    <img src="https://placebear.com/400/400" alt="A bear">
+                    <figcaption>Tiny caption, make me small</figcaption>
+                </figure>
+                <p>This div would also like a gradient background. This paragraph would like to be aligned on the right side next to the image. This paragraph would like to be aligned on the right side next to the image.This paragraph would like to be aligned on the right side next to the image.</p>
+            </div>
+
+            <details>
+                <summary>Hint</summary>
+                <code>
+                    .bigger-paragraph {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;font-size: 2em;<br>
+                    }<br><br>
+
+                    .media-text {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;overflow: hidden;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;background: linear-gradient(43deg, rgba(0,150,255,1) 25%, rgba(48,92,222,1) 100%);<br>
+                    }<br><br>
+
+                    .media-text figure {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;float: left;<br>
+                    }<br><br>
+
+                    .media-text figcaption {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;font-size: 0.5em;<br>
+                    }
+                </code>
+            </details>
+        </section>
+
+        <section id="descendant-selector">
+            <h2>Descendant selector</h2>
+
+            <p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Descendant_combinator" target="_blank" class="docs">Documentation</a></p>
+
+            <p class="different-p">This paragraph has a <strong>word</strong> that needs a background, it also has a <a href="http://www.nos.nl">link</a> that needs a different color from all the other links in the page.</p>
+
+            <div class="links-underneath box-border">
+                <p>I want these links to have a border and a background and they need to be underneath eachother, i also want the second link to have a bit of space from the first link (they can't touch eachother) </p>
+                <a href="">This is a link</a>
+                <a href="">This is also a link</a>
+            </div>
+
+            <details>
+                <summary>Hint</summary>
+                <code>
+                    .different-p strong {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;background: blueviolet;<br>
+                    }<br><br>
+
+                    .different-p a {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;color: red;<br>
+                    }<br><br>
+
+                    .links-underneath a {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;display: block<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;border: 2px solid blueviolet<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;background: aliceBlue<br>
+                    }<br><br>
+
+                    .links-underneath a + a {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;margin-top: 2em<br>
+                    }
+                </code>
+            </details>
+        </section>
+
+        <section id="cascade">
+            <h2>The C(ascading) in CSS</h2>
+
+            <p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Cascade" target="_blank" class="docs">Documentation</a></p>
+
+            <div class="box-border">
+                <h3>Style this div</h3>
+                <p>With a border, background color and padding and margin</p>
+            </div>
+
+            <div class="box-border">
+                <h3>Style this div</h3>
+                <p>With a border, background color and padding and margin</p>
+            </div>
+
+            <details>
+                <summary>Hint</summary>
+                <code>
+                    .box-border {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;padding: 1.5em;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;margin-bottom: 1em;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;background: blueviolet;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;border: 2px solid blueviolet<br>
+                    }
+                </code>
+            </details>
+        </section>
+        
+        <section id="sizing">
+            <h2>Sizing and units</h2>
+
+            <p><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units" target="_blank" class="docs">Documentation</a></p>
+
+            <p class="p-ems">Style this paragraphs with em</p>
+            <p class="p-pxs">Style this paragraphs with px</p>
+            <p class="p-rems">Style this paragraphs with rem</p>
+
+            <div class="div-percentages">
+                <p>This div wants a background and a 80% percentage width and a 150px height, resize the screen see what happens.</p>
+            </div>
+
+            <div class="div-viewport">
+                <p>This div wants a background and a 80vw width and a 25vh height, resize the screen see what happens.</p>
+            </div>
+
+            <div class="div-fixed">
+                <p>This div wants a background and a 800px width and a 150px height, resize the screen see what happens.</p>
+            </div>
+
+            <details>
+                <summary>Hint</summary>
+                <code>
+                    .p-ems {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;font-size: 2em;<br>
+                    }<br><br>
+
+                    .p-pxs {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;font-size: 30px;<br>
+                    }<br><br>
+                    
+                    .p-rems {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;font-size: 2rem;<br>
+                    }<br><br>
+
+                    .div-percentages {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;width: 80%;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;height: 150px;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;background: aliceblue;<br>
+                    }<br><br>
+
+                    .div-viewport {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;width: 80vw;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;height: 25vh;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;background: aliceblue;<br>
+                    }<br><br>
+
+                    .div-fixed {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;width: 800px;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;height: 150px;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;background: aliceblue;<br>
+                    }<br><br>
+                </code>
+            </details>
+        </section>
+
+        <section id="colors">
+            <h2>Color declaration</h2>
+
+            <p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value" target="_blank" class="docs">Documentation</a></p>
+
+            <p class="color-named">This paragraph wants to be colored in a named color, like red or blue or try one yourself.</p>
+
+            <p class="color-hex">This paragraph wants to be colored in a hexidecimal color.</p>
+
+            <p class="color-rgb">This paragraph wants to be colored in a rgb or a rgba format, google it if you don't know it yet.</p>
+
+            <p class="color-hsl">This paragraph wants to be colored in a HSL format, google it if you don't know it yet.</p>
+
+            <details>
+                <summary>Hint</summary>
+                <code>
+                    .color-named {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;color: blueviolet;<br>
+                    }<br><br>
+
+                    .color-hex {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;color: #8a2be2;<br>
+                    }<br><br>
+
+                    .color-rgb {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;color: rgb(54,17,89);<br>
+                    }<br><br>
+
+                    .color-hsl {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;color: hsl(271,76,53);<br>
+                    }<br><br>
+                </code>
+            </details>
+        </section>
+
+        <section id="fonts">
+            <h2>Font declarations</h2>
+
+            <p>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font" target="_blank" class="docs">Documentation</a><br>
+                <a href="https://fonts.google.com/" target="_blank" class="docs">Google fonts</a><br>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face" target="_blank" class="docs">Font face</a>
+            </p>
+
+            <p>Please change the font of the whole page to something you like, arial, times, georgia.</p>
+            
+            <p>Please change all the h2 elements to a different font.</p>
+            
+            <p>Extra: use a font from <a href="https://fonts.google.com/" target="_blank">https://fonts.google.com/</a></p>
+
+            <details>
+                <summary>Hint</summary>
+                <code>
+                    body {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;font-family: georgia, sans-serif;<br>
+                    }<br><br>
+
+                    h2 {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;font-family: "Times new roman", sans-serif;<br>
+                    }<br><br>
+
+                    // Import font from google fonts<br><br>
+
+                    @import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Roboto&display=swap');<br><br>
+                    h2 {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;font-family: Roboto, sans-serif;<br>
+                    }<br><br>
+                </code>
+            </details>
+        </section>
+
+        <section id="images">
+            <h2>Images</h2>
+
+            <p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_images" target="_blank" class="docs">Documentation</a></p>
+
+            <img src="https://placebear.com/200/300" alt="A bear">
+
+            <div class="bg">
+                <p>This div wants an image as a background, also please add some padding aswell and make it a square box.</p>
+            </div>
+
+            <details>
+                <summary>Hint</summary>
+                <code>
+                    .bg {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;background-image: url(https://placebear.com/200/300);<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;background-repeat: no-repeat;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;background-size: cover;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;padding: 2em;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;width: 30%;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;aspect-ratio: 1/1;<br>
+                    }<br><br>
+                </code>
+            </details>
+        </section>
+
+        <section id="flexbox">
+            <h2>Flexbox</h2>
+
+            <p>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox" target="_blank" class="docs">Documentation</a><br>
+                <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank" class="docs">CSS tricks</a><br>
+                <a href="https://flexboxfroggy.com/" target="_blank" class="docs">Flexbox froggy</a>
+            </p>
+
+            <p>This navigation would like to be aligned horizontally. I would also like it if you remove the bullet points, cause that looks ugly in a menu. Also make 1 link "active" by making it look "active", like i'm on the page about.</p>
+
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">News</a></li>
+                    <li><a href="">Events</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+            </nav>
+
+            <details>
+                <summary>Hint</summary>
+                <code>
+                    .main-nav ul {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;display: flex;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;gap: 20px;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;padding: 0;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;margin: 0;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;list-style: none;<br>
+                    }<br><br>
+
+                    .main-nav .is-active {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;background: blueviolet;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;color: white;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;padding: 0.2em;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;text-decoration: none;<br>
+                    }
+                </code>
+            </details>
+        </section>
+
+        <section id="grid">
+            <h2>Grid</h2>
+
+            <p>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout" target="_blank" class="docs">Documentation</a><br>
+                <a href="https://css-tricks.com/snippets/css/complete-guide-grid/" target="_blank" class="docs">CSS tricks</a><br>
+                <a href="https://cssgridgarden.com/" target="_blank" class="docs">Grid garden</a>
+            </p>
+
+            <p>You can align the cards next to eachother by using grid</p>
+
+            <ul class="card-grid">
+                <li class="card">
+                    <img src="https://placebear.com/300/200" alt="A bear">
+                    <h3>This is a title</h3>
+                    <p>This is a small introduction text</p>
+                    <a href="">link</a>
+                </li>
+                <li class="card">
+                    <img src="https://placebear.com/300/200" alt="A bear">
+                    <h3>This is a title</h3>
+                    <p>This is a small introduction text</p>
+                    <a href="">link</a>
+                </li>
+                <li class="card">
+                    <img src="https://placebear.com/300/200" alt="A bear">
+                    <h3>This is a title</h3>
+                    <p>This is a small introduction text</p>
+                    <a href="">link</a>
+                </li>
+            </ul>
+
+            <details>
+                <summary>Hint</summary>
+                <code>
+                    .card-grid {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;display: grid;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;grid-template-columns: repeat(3, 1fr);<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;grid-gap: 5%;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;list-style: none;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;padding: 0;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;margin: 0;<br>
+                    }<br><br>
+
+                    .card h3 {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;margin: 0.5em 0 1em;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;color: var(--primaryColor);<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;font-size: 1.5em;<br>
+                    }<br><br>
+
+                    .card a {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;display: inline-block;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;background: var(--primaryColor);<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;padding: 0.5em 1em;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;margin-top: 1em;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;color: white;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;text-decoration: none;<br>
+                    }
+                </code>
+            </details>
+        </section>
+  
+        <h2>Finished, well done!</h2>
+    </article>
+</body>
+</html>

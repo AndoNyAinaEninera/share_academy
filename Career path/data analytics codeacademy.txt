@@ -1,0 +1,8 @@
+statistics
+python
+databases and sql
+pandas
+matplotlib
+tableau
+machine learning
+data literacy (maitrise des donnees)

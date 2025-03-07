@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS exersize</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <section class="chapter">
+            <h1>This is the CSS exersize page</h1>
+            <p>Please use this file for the exersize during the second inspiration day. We will do the exersize together so everybody understands how this stuff works</p>
+
+            <p><strong>Create a style.css file and place it in the same directory as this css.html file.</strong></p>
+
+            <p>Follow the instructions during each step. Need help, raise your hand and ask Dorien or Bilal.</p>
+        </section>
+
+        <section class="chapter">
+            <h2>Use element selectors</h2>
+            
+            <ol>
+                <li>Style this list so that the text is bold</li>
+                <li>Also make it jump a bit to the right, by adding padding or margin</li>
+                <li>I would also like to have a border and a background color</li>
+            </ol>
+
+            <blockquote>This blockquote would like a colored background, larger text and a border on the left side</blockquote>
+
+            <p>This is a paragraph with a <a href="https://www.nos.nl">link</a> that needs an underline and a different color.</p>
+        </section>
+
+        <section class="chapter">
+            <h2>Use class selectors</h2>
+
+            <p class="bigger-paragraph">This paragraph would like a bigger text, but only this paragraph not all the paragraphs on this page</p>
+
+            <div class="media-text">
+                <figure>
+                    <img src="https://placebear.com/400/400" alt="A bear">
+                    <figcaption>Tiny caption, make me small</figcaption>
+                </figure>
+                <p>This div would also like a gradient background. This paragraph would like to be aligned on the right side next to the image. This paragraph would like to be aligned on the right side next to the image.This paragraph would like to be aligned on the right side next to the image.</p>
+            </div>
+        </section>
+
+        <section class="chapter">
+            <h2>Use descendant selectors</h2>
+
+            <p class="different-p">This paragraph has a <strong>word</strong> that needs a background, it also has a <a href="http://www.nos.nl">link</a> that needs a different color from all the other links in the page.</p>
+
+            <section class="links-underneath">
+                <p>I want these links to have a border and a background and they need to be underneath eachother, i also want the second link to have a bit of space from the first link (they can't touch eachother) </p>
+                <a href="">This is a link</a>
+                <a href="">This is also a link</a>
+            </section>
+        </section>
+
+        <section class="chapter">
+            <h2>Box model</h2>
+
+            <section class="box-section">
+                <h3>Style this section</h3>
+                <p>With a border, background color and padding and margin</p>
+            </section>
+
+            <section class="box-section">
+                <h3>Style this section</h3>
+                <p>With a border, background color and padding and margin</p>
+            </section>
+        </section>
+
+        <section class="chapter">
+            <h2>Sizes and units</h2>
+
+            <p class="p-ems">Style this paragraphs with em</p>
+            <p class="p-pxs">Style this paragraphs with px</p>
+            <p class="p-rems">Style this paragraphs with rem</p>
+
+            <div class="div-percentages">
+                <p>This div wants a background and a 80% percentage width and a 100px height, resize the screen see what happens.</p>
+            </div>
+
+            <div class="div-fixed">
+                <p>This div wants a background and a 800px width and a 100px height, resize the screen see what happens.</p>
+            </div>
+
+            <div class="div-viewport">
+                <p>This div wants a background and a 80vw width and a 25vh height, resize the screen see what happens.</p>
+            </div>
+        </section>
+
+        <section class="chapter">
+            <h2>Color declarations</h2>
+
+            <p class="name-color">This paragraph wants to be colored in a named color, like red or blue or try one yourself.</p>
+
+            <p class="hex-color">This paragraph wants to be colored in a hexidecimal color.</p>
+
+            <p class="rgb-color">This paragraph wants to be colored in a rgb or a rgba format, google it if you don't know it yet.</p>
+
+            <p class="hsl-color">This paragraph wants to be colored in a HSL format, google it if you don't know it yet.</p>
+        </section>
+
+        <section class="chapter">
+            <h2>Font declarations</h2>
+
+            <p>Please change the font of the whole page to something you like, arial, times, georgia.</p>
+            
+            <p>Please change all the h2 elements to a different font.</p>
+            
+            <p>Extra: use a font from <a href="https://fonts.google.com/" target="_blank">https://fonts.google.com/</a></p>
+        </section>
+
+        <section class="chapter">
+            <h2>Images</h2>
+
+            <img src="https://placebear.com/200/300" alt="A bear">
+
+            <section class="bg">
+                <p>This section wants an image as a background, also please add some padding aswell and make it a square box.</p>
+            </section>
+        </section>
+
+        <section class="chapter">
+            <h2>Flexbox</h2>
+
+            <p>This navigation would like to be aligned horizontally. I would also like it if you remove the bullet points, cause that looks ugly in a menu. Also make 1 link "active" by making it look "active", like i'm on the page about.</p>
+
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">News</a></li>
+                    <li><a href="">Events</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+            </nav>
+        </section>
+
+        <section class="chapter">
+            <h2>Grid</h2>
+
+            <p>You can align the cards next to eachother by using grid</p>
+
+            <ul class="card-grid">
+                <li>
+                    <img src="https://placebear.com/300/200" alt="A bear">
+                    <h3>This is a title</h3>
+                    <p>This is a small introduction text</p>
+                    <a href="">Button</a>
+                </li>
+                <li>
+                    <img src="https://placebear.com/300/200" alt="A bear">
+                    <h3>This is a title</h3>
+                    <p>This is a small introduction text</p>
+                    <a href="">Button</a>
+                </li>
+                <li>
+                    <img src="https://placebear.com/300/200" alt="A bear">
+                    <h3>This is a title</h3>
+                    <p>This is a small introduction text</p>
+                    <a href="">Button</a>
+                </li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>

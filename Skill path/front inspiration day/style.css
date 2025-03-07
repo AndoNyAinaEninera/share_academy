@@ -1,0 +1,117 @@
+html {
+    box-sizing: border-box;
+    font-size: 10px;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h1, h2 {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+ol {
+    font-weight: bold;
+    margin-left: 40px;
+    background-color: aqua;
+    border: 5px solid blueviolet;
+    padding: 15px 15px 15px 30px;
+}
+
+blockquote {
+    background-color: yellowgreen;
+    font-size: 1.5em;
+    border-left: 5px solid black;
+}
+
+a {
+    color: red;
+}
+
+.bigger-paragraph {
+    font-size: 2em;
+}
+
+.media-text {
+    overflow: hidden;
+    background: linear-gradient(90deg, rgba(207,205,23,1) 0%, rgba(174,19,225,1) 59%, rgba(0,212,255,1) 100%);
+}
+
+.media-text figure {
+    float: left;
+}
+
+.different-p strong {
+    background-color: blue;
+    color: white;
+}
+
+.different-p a {
+    color: aqua;
+}
+
+.links-underneath a {
+    border: 2px solid black;
+    background-color: pink;
+    display: block;
+    margin-top: 12px;
+}
+
+.box-section {
+    border: 5px dotted black;
+    background-color: yellow;
+    padding: 20px;
+    margin: 20px;
+}
+
+.p-ems {
+    font-size: 2em;
+}
+
+.p-pxs {
+    font-size: 18px;
+}
+
+.p-rems {
+    font-size: 2rem;
+}
+
+.div-percentages {
+    width: 80%;
+    height: 100px;
+    background-color: gray;
+}
+
+.div-fixed {
+    width: 800px;
+    height: 100px;
+    background-color: brown;
+}
+
+.div-viewport {
+    width: 80vw;
+    height: 25vh;
+    background-color: goldenrod;
+}
+
+.name-color {
+    color: green;
+}
+
+.hex-color {
+    color: #5c3155
+}
+
+.rgb-color {
+    color: rgba(0,212,255,1)
+}
+
+.hsl-color {
+    color: hsl(3, 30%, 50%)
+}

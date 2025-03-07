@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript intro</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            --primaryColor: #f7df1e;
+            --secondaryColor: black;
+            font-family: Calibri, sans-serif;
+        }
+
+        h1, h2 {
+            display: inline-flex;
+            padding: 0.5em 0.8em;
+            color: var(--primaryColor);
+            background: var(--secondaryColor);
+        }
+
+        article {
+            width: 90%;
+            margin: 0 auto;
+        }
+        
+        nav a {
+            color: var(--secondaryColor);
+            line-height: 1.5;
+        }
+
+        section {
+            margin-top: 2em;
+            border-top: 2px solid var(--primaryColor);
+        }
+
+        code {
+            display: block;
+            padding: 1em;
+            font-family: monospace,sans-serif;
+            background: #ccc;
+        }
+
+        code + code {
+            margin-top: 1em;
+        }
+
+        .box {
+            max-width: 15rem;
+            padding: 0.5em;
+            margin-bottom: 1em;
+            border: 2px solid blueviolet;
+            background: aliceblue;
+        }
+
+        .box-inverse {
+            max-width: 15rem;
+            padding: 0.5em;
+            margin-bottom: 1em;
+            border: 2px solid aliceblue;
+            background: blueviolet;
+            color: aliceblue;
+        }
+
+        .docs {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5em;
+            color: var(--secondaryColor);
+        }
+
+        .docs::before {
+            content: '';
+            width: 1em;
+            height: 1em;
+            background: var(--primaryColor);
+            border-radius: 50%;
+        }
+
+        button {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>    
+    <article>
+        <h1>Javascript excercises</h1>
+        <nav>
+            <ol>
+                <li><a href="#declaring-variables">Declaring variables</a></li>
+                <li><a href="#changing-variables">Changing variables</a></li>
+                <li><a href="#selecting-elements">Selecting elements</a></li>
+                <li><a href="#changing-dom">Changing the DOM</a></li>
+                <li><a href="#add-remove-classes">Adding and removing classes</a></li>
+                <li><a href="#event-listeners">Adding event listeners</a></li>
+            </ol>
+        </nav>
+        <section id="declaring-variables">
+            <h2>Declaring variables</h2>
+            <p><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Variables" target="_blank" class="docs">Documentation</a></p>
+            <h3>Step 1</h3>
+            <p>Set a title variable.</p>
+            <code>
+                let title = "This is a changable title";
+            </code>
+            <h3>Step 2</h3>
+            <p>Set a subtitle variable.</p>
+            <code>
+                const subtitle = "This is a non changable subtitle"
+            </code>
+            <h3>Step 3</h3>
+            <p>Log the variables in your console.</p>
+            <code>
+                console.log(title);
+            </code>
+        </section>
+        <section id="changing-variables">
+            <h2>Changing variables</h2>
+
+            <h3>Step 1</h3>
+            <p>Set a title variable.</p>
+            <code>
+                title = "This is now a changed title";
+            </code>
+            <h3>Step 3</h3>
+            <p>Log the changed variable in your console.</p>
+            <code>
+                console.log(title);
+            </code>
+        </section>
+        <section id="selecting-elements">
+            <h2>Selecting html elements</h2>
+            
+            <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors" target="_blank" class="docs">Documentation</a></p>
+            <h3>Select an element with a class</h3>
+            <div class="class-element box">This is a div with a class</div>
+            <code>
+                let classElement = document.getElementsByClassName("class-element");
+            </code>
+            <p>Log the element to your console</p>
+            <code>
+                console.log(classElement);
+            </code>
+
+            <h3>Select an element with an id</h3>
+            <div id="id-element" class="box">This is a div with an id</div>
+            <code>
+                let idElement = document.getElementById("id-element");
+            </code>
+            <p>Log the element to your console</p>
+            <code>
+                console.log(idElement);
+            </code>
+        </section>
+        <section id="changing-dom">
+            <h2>Changing something in the DOM</h2>
+            
+            <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent" target="_blank" class="docs">Documentation</a></p>
+            <h3>Change the content of a paragraph</h3>
+            <p id="change-content" class="box">This is a paragraph with a some text that we will change</p>
+            <code>
+                document.getElementById("change-content").textContent="Hello everyone, we changed the text! 🤓";
+            </code>
+            <p>Change the text to something from of our variables</p>
+            <code>
+                document.getElementById("change-content").textContent = title;
+            </code>
+        </section>
+        <section id="add-remove-classes">
+            <h2>Adding and removing and classes</h2>
+            
+            <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/classList" target="_blank" class="docs">Documentation</a></p>
+            <div id="box" class="box">
+                This is a box that will be a little bit different.
+            </div>
+            <code>
+                const box = document.getElementById("box");<br><br>
+                
+                box.classList.add("box-inverse");
+            </code>
+            <p>Now lets remove that class again</p>
+            <code>
+                box.classList.remove("box-inverse");
+            </code>
+        </section>
+        <section id="event-listeners">
+            <h2>Adding event listeners</h2>
+            
+            <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener" target="_blank" class="docs">Documentation</a></p>
+            <h3>Change content on a click</h3>
+            
+            <div id="click" class="box">
+                This is a box that will be a little bit different.
+            </div>
+
+            <code>
+                const click = document.getElementById("click");<br><br>
+                
+                click.addEventListener("click", function(){<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;this.textContent = "clicked it!";<br>
+                });
+            </code>
+            <p>You can use your previous variables again.</p>
+            <code>
+                const click = document.getElementById("click");<br><br>
+                
+                click.addEventListener("click", function(){<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;this.textContent = title;<br>
+                });
+            </code>
+            <h3>Add a class on a click.</h3>
+            <div id="click-add-class" class="box">
+                This is a box that will be a little bit different.
+            </div>
+            <code>
+                const clickAddClass = document.getElementById("click-add-class");<br><br>
+                
+                clickAddClass.addEventListener("click", function(){<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;this.classList.add("box-inverse")<br>
+                });
+            </code>
+            <p>You can also remove it again.</p>
+            <code>
+                clickAddClass.addEventListener("click", function(){<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;this.classList.remove("box-inverse")<br>
+                });
+            </code>
+            <p>Let's toggle this.</p>
+            <code>
+                clickAddClass.addEventListener("click", function(){<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;this.classList.toggle("box-inverse")<br>
+                });
+            </code>
+        </section>
+        <section id="hamburger-menu">
+            <h2>Create a hamburger menu</h2>
+            <p>We have a navigation and a button to toggle the display of the navigation.</p>
+            <button id="toggleNav" class="hamburger-toggle">Toggle menu</button>
+            <nav id="mainNav" class="main-nav">
+                <ul>
+                    <li><a href="">Menu item 1</a></li>
+                    <li><a href="">Menu item 2</a></li>
+                    <li><a href="">Menu item 3</a></li>
+                </ul>
+            </nav>
+
+            <p>First we need to add some css.</p>
+            <code>
+                CSS<br><br>
+                .main-nav { display: none;}<br>
+                .main-nav.is-open {display: block}<br><br>
+
+                .hamburger-toggle {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;padding: 0.5em;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;background: var(--js);<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;border: 2px solid black;<br>
+                }<br><br>
+
+                .hamburger-toggle.is-open {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;background: black;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;color: var(--js);<br>
+                }
+            </code>
+            <style>
+                .main-nav {
+                    display: none;
+                }
+
+                .main-nav.is-open {
+                    display: block;
+                }
+                
+                .hamburger-toggle {
+                    padding: 0.5em;
+                    background: var(--js);
+                    border: 2px solid black;
+                }
+
+                .hamburger-toggle.is-open {
+                    background: black;
+                    color: var(--js);
+                }
+            </style>
+            <p>Now lets add the JavaScript</p>
+            <code>
+                JS<br><br>
+                const toggleNav = document.getElementById("toggleNav");<br>
+                const mainNav = document.getElementById("mainNav");<br><br>
+
+                toggleNav.addEventListener("click", function(){<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;this.classList.toggle("is-open")<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;mainNav.classList.toggle("is-open")<br>
+                });
+            </code>
+        </section>
+        <h2>Finished, well done!</h2>
+    </article>
+
+    <script src="app.js"></script>
+</body>
+</html>

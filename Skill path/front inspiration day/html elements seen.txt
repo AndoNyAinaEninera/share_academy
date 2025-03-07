@@ -1,0 +1,107 @@
+- body
+- headers
+- div
+- paragraph
+- span
+- em, strong
+- br
+- ul, ol
+- img, video
+- anchor
+- comments
+
+
+table
+- tr
+- td
+-th
+
+
+head elements
+- title
+
+
+form (restart)
+- input
+- label
+- type text, number, password, range, checkbox, radiobutton, select, datalist, textarea
+- submit
+
+
+- required, min, max, minlength, maxlength, pattern
+
+
+Structural elements
+- <header>, <nav>
+- <footer>, <main>
+- <section>, <article>
+- <aside>
+- <figure>, <figcaption>
+- <video>, <embed>, <audio>
+
+
+CSS
+
+- color, font-family, font-size, font-weight, font-style, text-transform, text-align, background-color, opacity, background-image, !important
+- line-spacing, word-spacing, line-height
+- web safe fonts
+- universal selector : *
+- select by type : type
+- select by class : .classname
+- select by id : #idname
+- select by attribute : [attribute], type[attribute*=value]
+- pseudo-class : hover, active, valid, checked, focus, inalid, focus-within, ...
+- transitions
+- animations
+- pseudo-element
+- specificity (id < class < type)
+- chaining, descendant combinator
+- multiple selector
+
+
+
+- box model : dimension, border, padding, margin
+- margin auto
+- margin collapse
+- minimum, maximum height/width
+- overflow (hidden, scroll, visible)
+- resetting default, visibility
+- * {box-sizing: border-box;}
+
+
+- top, bottom, left, right, z-index
+- float
+- clear
+
+
+- position : static, relative, absolute, fixed, sticky
+
+
+- display : inline, block, inline-block
+- flex, inline-flex
+justify-content: flex-start(default), flex-end, center, space-around, space-between, space-evenly
+align-items: flex-start, flex-end, center, baseline, stretch(default)
+flex-grow
+flex-shrink
+flex-basis
+flex
+flex-wrap
+align-content
+flex-direction
+flex-flow
+
+- grid
+
+
+JAVASCRIPT
+
+types de donnees : string, number, booleen, object, null, NaN, undefined
+conditions :
+boucles : while, for
+fonctions :
+object constructor function :
+classe et heritages
+objets
+
+
+
