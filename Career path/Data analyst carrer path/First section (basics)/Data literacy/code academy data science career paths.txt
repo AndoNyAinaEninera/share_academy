@@ -1,0 +1,4 @@
+- Machine learning
+- Data analytics
+- Inference
+- Natural langage processing

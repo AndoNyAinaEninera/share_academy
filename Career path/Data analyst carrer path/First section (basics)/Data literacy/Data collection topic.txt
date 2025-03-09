@@ -1,0 +1,23 @@
+La méthodologie correspond à la manière dont les données ont été collectées
+
+types de variables :
+- numeriques (discrete, continue)
+
+- categorielles (nominale, ordinale, binaires)
+
+
+gerer les donnees desordonnes :
+
+
+
+
+
+thinking about data
+
+
+
+visualising data
+
+
+
+analysing data
