@@ -1,0 +1,10 @@
+- Do we have sufficient data to answer the question at hand?
+- Can my data answer my exact question?
+- Who participated in the data?
+- Who is left out?
+- Who made the data?
+- Where does that data come from?
+
+ 
+(how the data was collected)
+(which biases are hidden in the data)

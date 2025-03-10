@@ -1,0 +1,5 @@
+- Machine Learning/ Algorithms Data Scientist
+- Analytics Data Scientist
+- Inference Data Scientist
+- Natural Language Processing Data Scientist
+- BI Data Analyst

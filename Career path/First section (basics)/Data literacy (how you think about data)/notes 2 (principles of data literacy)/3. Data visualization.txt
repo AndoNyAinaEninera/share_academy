@@ -1,0 +1,7 @@
+Etudes de cas :
+- navette spatiale challenger joins torique defaillants NASA 28 janvier 1986
+- analyse causale et la theorie du cholera de Jon Snow
+
+
+
+- Distribution : normal, skewed, bimodal (Parfois, des distributions bimodales se produisent lorsqu'il existe des différences entre les catégories d'une autre variable)

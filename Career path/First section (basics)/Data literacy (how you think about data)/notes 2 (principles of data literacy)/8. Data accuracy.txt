@@ -1,0 +1,15 @@
+Is the data use a standard measurement unit and standard method ?
+
+
+
+There are a lot of ways a dataset can have low accuracy, but it all comes down to the question of: “are these measurements (or categorizations) correct?” It requires a critical evaluation of your specific dataset to identify what the issues are, but there are a few ways to think about it.
+
+First, thinking about the data against expectations and common sense is crucial for spotting issues with accuracy. You can do this by inspecting the distribution and outliers to get clues about what the data looks like.
+Second, critically considering how error could have crept in during the data collection process will help you group and evaluate the data to uncover systematic inconsistencies.
+Finally, identifying ways that duplicate values could have been created goes a long way towards ensuring that reality is only represented once in your data. A useful technique is to distinguish between what was human collected versus programmatically generated and using that distinction to segment the data.
+Holding these perspectives in mind is important for both numeric and categorical 
+Preview: Docs Loading link description
+variables
+. In fact, they often provide clues about each other.
+
+As far as resolving accuracy issues, there’s no simple solutions, and every solution has to be tailored to that specific dataset. In the end, the only way to improve a dataset’s accuracy is to use real-world knowledge to be sure that the dataset reflects reality. But even then, the reason that we collect data is generally to learn something new about the world. Sometimes the data will surprise you, but distinguishing between a new finding and inaccuracy is the work of a skilled data scientist.

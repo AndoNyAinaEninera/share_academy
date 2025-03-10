@@ -1,0 +1,9 @@
+- Frequency/Proportion/Pourcentage/Ratio
+- Distribution : normal, skewed, bimodal
+- Mean and Standard deviation / Median and IQR
+
+- Distribution : normal, skewed, bimodal (Parfois, des distributions bimodales se produisent lorsqu'il existe des différences entre les catégories d'une autre variable)
+
+- Aggregate statistics and mode
+
+- Scatterplot and correlation coefficient
