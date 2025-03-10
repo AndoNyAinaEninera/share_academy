@@ -1,0 +1,20 @@
+Bias in data collection :
+- selection bias (non representative sample : too small or is not randomized)
+Selection bias can also crop up when the only data available is influenced by ==>
+- historical bias (systematic influence based on historic social and cultural beliefs)
+
+
+Bias in building and optimizing algorithms :
+- algorithmic bias (systematic and repeatable errors in a computer system that create 
+unfair outcomes, algorithmic bias can be initiated through selection bias and then 
+reinforced and perpetuated by other bias types)
+- evaluation bias
+
+
+Bias in interpreting results and drawing conclusions :
+- Confirmation bias (to limit confirmation bias, clearly state hypotheses and goals before 
+starting an analysis, and then honestly evaluate how they influenced our interpretation and 
+reporting of results)
+- Overgeneralization bias (is inappropriately extending observations made with one dataset 
+to other datasets)
+- Reporting bias (s the human tendency to only report or share results that affirm our beliefs or hypotheses, To limit reporting bias, report negative results and cite others who do, too)

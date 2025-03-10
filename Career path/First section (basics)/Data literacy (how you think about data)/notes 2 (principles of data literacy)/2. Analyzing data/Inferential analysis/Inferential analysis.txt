@@ -1,0 +1,5 @@
+Inferential analysis lets us test a hypothesis on a sample of a population 
+and then extend our conclusions to the whole population
+
+
+- A/B testing : randomisation, control, replication, representative sample

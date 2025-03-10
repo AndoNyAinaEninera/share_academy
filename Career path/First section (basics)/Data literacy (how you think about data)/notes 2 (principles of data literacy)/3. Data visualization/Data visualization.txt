@@ -1,0 +1,35 @@
+Etudes de cas :
+- navette spatiale challenger joins torique defaillants NASA 28 janvier 1986
+- analyse causale et la theorie du cholera de Jon Snow
+
+
+Charts can be univariate, bivariate or multivariate (1, 2 or multiple variables)
+
+- Histogram, Linechart, Barchart
+
+- Density curve
+
+- Boxplot, Violinplot
+
+- Scatterplot
+
+-Piechart, Wafflechart, Donutchart
+
+- Univariate map (shows only locations)
+- Bivariate or multivariate map (shows geographical map plus additional variable)
+
+
+Misleading and confusing graphs :
+- Axes scaling :
+breaks(a revoir topic 2, lesson 2, page 2)
+linear scaling
+logarithmic scaling
+
+- Color scales :
+sequential
+diverging
+categorical
+
+- Color association (cultural based choice of color)
+
+- Labels, title and annotations

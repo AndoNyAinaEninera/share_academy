@@ -1,0 +1,18 @@
+« corrélation n'implique pas causalité »
+
+Etude de cas :
+- analyse causale et la theorie du cholera de Jon Snow
+
+
+Causal analysis generally relies on carefully designed experiments, but we can 
+sometimes also do causal analysis with observational data.
+
+Replication, randomization, control and representative sample are key components
+of good experimental design
+
+
+Causal inference with observational data requires:
+
+- Advanced techniques to identify a causal effect
+- Meeting very strict conditions
+- Appropriate statistical tests
