@@ -1,0 +1,55 @@
+The data is usually structured into tables
+
+Manipulation :
+
+- SELECT * FROM table_name;
+- SELECT column_name FROM table_name;
+
+
+- CREATE TABLE table_name (
+   column_1 data_type CONSTRAINT, 
+   column_2 data_type CONSTRAINT, 
+   column_3 data_type CONSTRAINT
+);
+
+
+- INSERT INTO celebs (column_1, column_2, column_3) 
+  VALUES (value_column_1, value_column_2, value_column_3);
+
+- ALTER TABLE celebs
+  ADD COLUMN column_1 data_type, column_2 data_type, ...;
+
+
+- UPDATE table_name
+  SET column_1 = value1, column_2 = value2, ...
+  WHERE condition;
+
+- DELETE FROM table_name WHERE condition;
+
+
+
+Querying :
+
+- DISTINCT
+- WHERE, AND (displays a row if all the conditions are true), OR (displays a row if any condition is true)
+- LIKE ("_", "%")
+- IS NULL, IS NOT NULL
+- BETWEEN (numbers, text or dates)
+- ORDER BY, ORDER BY ... DESC
+- LIMIT
+- CASE (if logic)
+
+
+Aggregate Functions :
+- COUNT(), SUM(), MAX(), MIN(), AVG(), ROUND()
+- GROUP BY
+- HAVING (same as WHERE but for groups)
+- Date and time manipulation https://www.sqlite.org/lang_datefunc.html
+
+
+Multiple tables :
+- JOIN
+- INNER JOIN, LEFT (OUTTER) JOIN, RIGHT (OUTTER) JOIN, FULL (OUTTER) JOIN
+- CROSS JOIN
+- UNION
+- WITH

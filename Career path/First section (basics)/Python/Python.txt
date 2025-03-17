@@ -1,0 +1,65 @@
+- codingame, ...
+- comment #...
+- print()
+
+- variables (bool, string, int, float(float have limitations : https://docs.python.org/3/tutorial/floatingpoint.html))
+
+- arithmetic operators (+, -, *, /, **, %, //) https://www.codecademy.com/resources/docs/python/operators?page_ref=catalog
+
+
+- control flow
+- if, else, while, for
+- break : break allows you to exit a loop when an external condition is met. Normal program execution resumes at the next statement. You can use a break statement with both for loops and while loops. In a nested loop, break will stop execution of the innermost loop
+- continue : when we only want to skip the current iteration of the loop
+- pass
+
+
+- strings (strings are immutable, we can’t change an individual character : try this_string[0] = "R")
+. upper, lower, title, split, join, replace, strip, format 
+
+
+- list
+- tuple = an immutable type of list
+- range = list of consecutive numbers ex: list of numbers from 0 to 9
+(sequences : suite de variable indexes et ordonnes)
+
+list method and manipulation :
+. append, remove, pop (removing by index), sort, sorted, insert, len, count(item) ...
+. + (concatenation), indexing, slicing,
+. zip(), list()
+
+
+
+- dictionnaries (groupe d'association cle-valeurs non ordonnees)
+
+
+
+
+
+
+
+
+- functions
+- built-in functions vs user defined functions https://docs.python.org/3/library/functions.html
+- lambda function (one line function, usable only one time)
+
+
+
+
+- open a file :
+with open('filename.txt') as cool_doc:
+  cool_contents = cool_doc.read()
+modes = read, write, append
+- manipulating csv file, json file
+- modules et packages
+
+
+
+- Programmation Oriente Objet
+
+
+
+
+
+
+

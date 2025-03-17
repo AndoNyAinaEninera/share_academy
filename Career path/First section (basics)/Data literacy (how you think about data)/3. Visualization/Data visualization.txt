@@ -13,7 +13,7 @@ Charts can be univariate, bivariate or multivariate (1, 2 or multiple variables)
 
 - Scatterplot
 
--Piechart, Wafflechart, Donutchart
+- Piechart, Wafflechart, Donutchart
 
 - Univariate map (shows only locations)
 - Bivariate or multivariate map (shows geographical map plus additional variable)

@@ -1,5 +1,11 @@
+Etude de cas :
+- Elaine Shoben vs StarComm Corporation on women hiring discrimination
+
+
+
+Others :
 - Frequency/Proportion/Pourcentage/Ratio
-- Distribution : normal, skewed, bimodal
+- Distribution : normal, skewed, bimodal, binomial
 - Mean and Standard deviation / Median and IQR
 
 - Distribution : normal, skewed, bimodal (Parfois, des distributions bimodales se produisent lorsqu'il existe des différences entre les catégories d'une autre variable)

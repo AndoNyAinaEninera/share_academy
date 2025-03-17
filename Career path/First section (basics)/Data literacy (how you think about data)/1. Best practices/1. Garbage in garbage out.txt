@@ -5,6 +5,11 @@
 - Who made the data?
 - Where does that data come from?
 
- 
+- What data is needed to achieve the goal?
+- How much data is needed?
+- Where and how can this data be found?
+- What methodology was used to collect the data?
+- Cleaned vs Raw data
+
 (how the data was collected)
 (which biases are hidden in the data)

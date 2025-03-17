@@ -1,0 +1,25 @@
+- Pandas is built on top of NumPy
+
+- NumPy Ndarray
+- Pandas Series and DataFrames
+https://pandas.pydata.org/docs/user_guide/10min.html#viewing-data
+
+- type, len, size, info
+
+
+CREATING DATA
+
+LOADING DATA
+
+SELECTING DATA
+
+MODIFYING DATAFRAMES
+reset_index, rename, apply(lambda x: ...), pivot
+
+AGGREGATES IN PANDAS
+mean, std, median, max, min, count, nunique, unique
+groupby
+
+
+MULTIPLE DATAFRAMES
+merge, concat,

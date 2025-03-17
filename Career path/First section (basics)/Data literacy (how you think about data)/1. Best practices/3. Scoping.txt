@@ -1,0 +1,14 @@
+https://datasciencepublicpolicy.org/our-work/tools-guides/data-science-project-scoping-guide/
+
+Step 0: Problem Understanding – What is the problem? Who does it impact and how much? How is it being solved today and what are some of the gaps?
+
+Step 1: Goals – What are the goals of the project? How will we know if our project is successful?
+
+Step 2: Actions – What actions or interventions will this work inform?
+
+Step 3: Data – What data do you have access to internally? What data do you need?
+What can you augment from external and/or public sources?
+
+Step 4: Analysis – What analysis needs to be done? Does it involve description, detection, prediction, or behavior change? How will the analysis be validated?
+
+Ethical Considerations:  What are the privacy, transparency, discrimination/equity, and accountability issues around this project and how will you tackle them?
