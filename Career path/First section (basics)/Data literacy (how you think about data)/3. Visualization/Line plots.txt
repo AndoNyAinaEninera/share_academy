@@ -1,0 +1,7 @@
+Usefull with data that shows progression (over : time, temperature, distance, ...)
+
+
+
+plt.plot(x, y)
+
+plt.fill_between(hour, y_lower, y_upper, alpha=0.2)

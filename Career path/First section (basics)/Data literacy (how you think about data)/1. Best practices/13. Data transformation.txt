@@ -1,0 +1,68 @@
+- Data centering (Data centering involves subtracting the mean of a data set from each data point so the new mean is 0)
+Xcenteredi = Xi - μ
+
+For example, let’s take a look at a data set of ages for five individuals : ages = [24, 40, 28, 22, 56]
+The mean age in this data set is 34 years old.
+To center our data, we subtract the mean from each data point in ages:
+centered_ages = [-10, 6, -6, -12, 22]
+
+This centered data is useful because it tells us how far above or below the mean each data point is
+
+
+- Data scaling (use when the data are in different scale)
+Two of the most commonly used data scaling techniques are
+
+1) Min-Max normalisation
+For every feature in a data set, the minimum value of that feature is transformed into 0,
+the maximum value is transformed into 1, and every other value is transformed into a decimal between 0 and 1.
+Xnorm = (Xmax - Xmin) / (X - Xmin)
+
+One downside of min-max normalization is that it does not handle outliers very well.
+For example, if you have 99 values between 0 and 20, and one value is 100,
+then the 99 values will all be transformed to a value between 0 and 0.2 while the outlier is transformed to 1
+​
+from sklearn.preprocessing import MinMaxScaler
+scaler = MinMaxScaler()
+normalized_data = scaler.fit_transform(data)
+​
+
+2) Standardisation (Z-score normalization)
+Standardization involves subtracting the mean of each observation and then dividing by the standard deviation
+
+z = (value - mean) / std
+
+Once standardization is complete, all the features will have a mean of zero, a standard deviation of one
+​Unlike normalization, standardization does not have a bounding range.
+This means that even if you have outliers in your data, your standardized data will not be affected. 
+Therefore, if your dataset has outliers, standardization is the preferred scaling technique
+
+from sklearn.preprocessing import StandardScaler
+scaler = StandardScaler()
+standardized_data = scaler.fit_transform(data)
+
+
+
+
+3) Log transformation
+Log transformation is a data transformation method that replaces each variable x with log(x)
+When log transformation is applied to data that is not normally distributed, the result is that the data will be less skewed, or more “normal” than before.
+
+log_data = np.log(data)
+or
+from sklearn.preprocessing import PowerTransformer
+log_transform = PowerTransformer()
+log_transform.fit_transform(data)
+
+4) Cube root transformation
+Involves converting x to x^(1/3)
+This transformation reduces the right skewness but also has the benefit of working with zero and negative values.
+
+
+  Square transformation (or cube or higher power)
+Involves converting x to x^2
+To reduce left skewness
+
+
+5) MaxAbs scaling
+6) Robust scaling
+7) Power transformer scaling 

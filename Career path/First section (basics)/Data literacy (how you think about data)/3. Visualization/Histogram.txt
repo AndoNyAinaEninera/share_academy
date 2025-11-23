@@ -1,0 +1,28 @@
+plt.hist(dataset, bins=40)
+
+multiple histogram
+plt.hist(a, range=(55, 75), bins=20, alpha=0.5)
+plt.hist(b, range=(55, 75), bins=20, alpha=0.5)
+
+normalize histogram
+plt.hist(dataset, bins=40, density=true)
+
+Determine the number of bins:
+This can be a subjective choice, but some common methods include:
+Square root choice: Take the square root of the number of data points and round up. 
+Sturges' formula: Number of bins = 1 + log₂(n), where n is the number of data points. 
+Freedman-Diaconis' rule: Number of bins = (2 * IQR) / 3√n, where IQR is the interquartile range. 
+
+
+- Distribution : uniform, unimodal,  binomial, normal, skewed, bimodal, multimodal (Parfois, des distributions bimodales se produisent lorsqu'il existe des differences entre les categories d'une autre variable, the dataset has 2 different population)
+
+print(home_prices.skew()) (Generally, if skewness is less than -1 or greater than 1, the distribution is highly skewed.)
+
+
+
+How to interpret a distribution
+Center
+Spread
+Skew
+Modality
+Outliers

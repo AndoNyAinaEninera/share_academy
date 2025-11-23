@@ -1,0 +1,10 @@
+You can think any problem of enumeration as n wheels with all value possible in each one of them that you can roll
+
+- principe multiplicatif
+- permutation
+- arrangement sans remise
+- arrangement avec remise
+- combinaison sans remise (ne tient pas compte de l'ordre) https://www.youtube.com/watch?v=VVY4K-OT4FI&list=PLVUDmbpupCaru1ReP966kn39zbpkCKm-A
+
+
+

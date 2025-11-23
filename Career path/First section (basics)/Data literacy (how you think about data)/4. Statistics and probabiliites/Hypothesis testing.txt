@@ -1,0 +1,78 @@
+Step 1 : Ask question
+
+
+
+Step 2 : Define null and alternative hypothesis (In practice, the alternative hypothesis and p-value threshold should be chosen before data collection)
+
+
+Step 3 : Determine the Null distribution (sampling distribution of the null hypothesis)
+The distribution (across repeated samples) of the statistic we are interested in if the null hypothesis is true
+population mean, standard_error std/√n
+
+
+Step 4 : Calculate P-value or Confidence interval
+
+
+
+
+
+(One sample T-test : one-sample t-tests are used for comparing a sample average to an expected population average)
+
+. one-sample t-tests are used for quantitative data to compare a sample mean to an expected population mean.
+
+. tstat, pval = ttest_1samp(sample_distribution, expected_mean) => two tailed ttest by default
+
+. One sample T-test assumptions
+The sample was randomly selected from the population
+The individual observations were independent
+The data is normally distributed without outliers OR the sample size is large (enough)
+
+
+
+. (Binomial test : binomial tests are used for binary categorical data to compare a sample frequency to an expected population-level probability)
+
+Simulating the Null Distribution in binomial test  :
+We can simulate 10 coin flips and print out the number of those flips, If we run this a few times, we’ll likely see different results each time. This will give us get a sense for the range in the number of heads that could occur by random chance
+
+Or just use the PMF https://www.youtube.com/watch?v=J8jNoF-K8E8
+
+outcomes = []
+for i in range(10000): 
+    flips = np.random.choice(['heads', 'tails'], size=10, p=[0.5, 0.5])
+    num_heads = np.sum(flips == 'heads')
+    outcomes.append(num_heads)
+print(outcomes)
+## output is something like: [3, 4, 5, 8, 5, 6, 4, 5, 3, 2, 8, 5, 7, 4, 4, 5, 4, 3, 6, 5,...]
+
+
+confidence interval : np.percentile(outcomes, [2.5,97.5])
+# output: [37. 63.]
+
+
+pval = binom_test(x, n, p, alternative='greater')
+
+
+
+
+
+
+
+
+ERROR TYPES
+
+Null hypothesis:		is true		is false
+P-value significant		Type I Error	Correct!
+P-value not significant		Correct!	Type II error
+
+It turns out that, when we run a hypothesis test with a significance threshold, the significance threshold is equal to the type I error (false positive) rate for the test. To see this, we can use a simulation.
+
+
+Problems with Multiple Hypothesis Tests
+
+- When we run a hypothesis test for a single question, we have a 95% chance of getting the right answer (a p-value > 0.05) — and a 5% chance of making a type I error.
+
+- When we run hypothesis tests for two questions, we have only a 90% chance of getting the right answer for both hypothesis tests (.95*.95 = 0.90) — and a 10% chance of making at least one type I error.
+
+- When we run hypothesis tests for all 10 questions, we have a 60% chance of getting the right answer for all ten hypothesis tests (0.95^10 = 0.60) — and a 40% chance of making at least one type I error.
+
+To address this problem, it is important to plan research out ahead of time: decide what questions you want to address and figure out how many hypothesis tests you need to run. When running multiple tests, use a lower significance threshold (eg., 0.01) for each test to reduce the probability of making a type I error.

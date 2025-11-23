@@ -1,0 +1,8 @@
+- codingame
+- Kaggle
+
+
+Exercices :
+- python
+- pandas
+- sql

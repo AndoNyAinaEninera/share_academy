@@ -1,0 +1,18 @@
+views : report view, data view, model view
+
+- file > options and settings > options > preview features > activate shape visual map > activate on-object interaction
+
+
+- Get data > text/csv > Transform
+
+- power query:
+
+close and apply
+formula bar
+column profile, column distribution, column quality
+change data type
+
+add visual
+edit interactions
+
+Measures / measure table (model view > enter data)

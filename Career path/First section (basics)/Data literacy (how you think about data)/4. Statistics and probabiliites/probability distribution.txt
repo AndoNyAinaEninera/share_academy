@@ -1,0 +1,39 @@
+- Bernoulli distribution (1 trial, 2 possible outcomes) variance = p(1-p), E(X) = p, X ~ Bernoulli (p)
+- Binomial distribution (n trials, 2 possible outcomes) variance = np(1-p), E(X) = np, X ~ Binomial (n, p)
+
+
+- Poisson distribution (frequency of an event to happen in a specific amount of time) X ~ Poisson (λ)
+variance = mean = λ = np
+. a poisson variable is a count of number of occurence of an independant event, the eventsare occuring randomly and independently and does not change through time
+. the probability of success is very small and many trials
+
+Relation between Poisson and Binomial
+. The Binomial distribution tends to a Poisson distribution when n->∞ and p->0
+the more n is large and p tend to 0, the more binomial distribution tend to poisson distribution
+
+- Probability Mass Function (PMF) for discrete variable
+
+
+
+- Normal distribution X ~ Normal (μ, σ)
+- Probability Density Function (PDF) for continuous variable (only work for intervals, not a single point)
+
+- Cumulative Distribution Function (CDF)
+- Probability Point Function (PPF) inverse of CDF
+
+
+
+- Distribution : uniform, unimodal, binomial, normal, skewed, bimodal, multimodal (Parfois, des distributions bimodales se produisent lorsqu'il existe des differences entre les categories d'une autre variable, the dataset has 2 different population)
+
+print(home_prices.skew()) (Generally, if skewness is less than -1 or greater than 1, the distribution is highly skewed.)
+
+
+===Properties of Expectations===
+E(X+Y)=E(X)+E(Y)
+E(aX)=aE(X)
+E(X+a)=E(X)+a
+
+===Properties of Variance===
+Var(X+a)=Var(X)
+Var(aX)=a**2Var(X)
+Var(X+Y)=Var(X)+Var(Y)

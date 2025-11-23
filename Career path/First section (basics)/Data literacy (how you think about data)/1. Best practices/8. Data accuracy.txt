@@ -1,4 +1,4 @@
-Is the data use a standard measurement unit and standard method ?
+Did the data use a standard measurement unit and standard method ?
 
 
 

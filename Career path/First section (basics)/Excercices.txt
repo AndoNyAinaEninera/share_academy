@@ -1,0 +1,12 @@
+- Python
+- Pandas
+- SQL
+- Data literacy
+- Statistics
+
+
+- research data analyst question that people are paying for (google or chatgpt)
+
+
+- Kaggle Exploratory Analysis
+- Portfolio

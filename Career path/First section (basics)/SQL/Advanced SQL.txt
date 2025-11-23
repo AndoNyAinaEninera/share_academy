@@ -1,0 +1,46 @@
+- Window functions
+
+SUM(change_in_followers) OVER (ORDER BY month)
+
+PARTITION BY
+
+FIRST_VALUE, LAST_VALUE
+
+RANGE BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING (framing)
+
+LAG, LEAD
+
+ROW_NUMBER, RANK, DENSE_RANK
+
+NTILE (quantile)
+
+
+
+
+- Math and Date functions
+
+Math operators + - / * % (division between 2 integers will give rounded integer, you need to perform a CAST as REAL on one operand to get REAL value as result, or multiply numerator by 1.0 REAL to transform it to a REAL number)
+
+Math functions
+ABS()
+CAST()convert an expression to another data type
+CAST() can also be used to convert TEXT values into a numerical value like REAL
+When doing so, it will only consider any valid prefix at the beginning of the string
+for example : SELECT CAST('3.14 is pi' AS REAL); This query will convert the TEXT value '3.14 is pi' into type REAL, considering only the prefix '3.14' and ignoring ' is pi', resulting in 3.14.
+
+
+Date and Time fuctions DATETIME() DATE() TIME() STRFTIME()
+ex:2015-01-01 18:33:52 So the format is : YYYY-MM-DD HH:MM:SS
+
+SELECT DATETIME(timestring);
+SELECT DATETIME('now', 'localtime')
+modifiers : SELECT DATETIME(timestring, modifier1, modifier2, ...);
+
+STRFTIME(format, timestring, modifier, modifier, ...)
+STRFTIME('%Y-%m-%d %H:%M', '2019-04-01', '+2 years', '+180 minutes')
+STRFTIME(format, column, modifier1, modifier2, ...)
+formats = %Y, %m, %d, %H, %M, %S 
+SELECT STRFTIME('%m %Y', 'now');
+
+subscription_start < '2016-12-01' select all date before '2016-12-01'
+

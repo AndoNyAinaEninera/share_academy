@@ -1,0 +1,21 @@
+plt.boxplot(data)
+plt.boxplot([dataset_one, dataset_two]) side by side boxplot
+sns.boxplot
+
+
+- Median
+- Quantile(0.25), Quantile(0.75)
+- Whikers (minimum/maximum, 1*std, 1,5*IQR) display information related to the spread of the dataset
+
+
+For example, let’s say you had a dataset where the first quartile was 4 and the third quartile was 9. The interquartile range for this dataset is 5.
+
+The whiskers would extend 1.5 times the length of the IQR. In this case, that is 1.5 * 5, or 7.5.
+
+We know the whiskers extend 7.5 units, but where do they start? They start at the edges of the box, or the first and third quartiles. In this case, the left whisker starts at the first quartile (4), and extend 7.5 units to the left. So the left whisker extends to -3.5. The right whisker starts at the third quartile (9) and extends to 16.5
+
+
+One more small detail to note — the whiskers usually don’t extend all the way to 1.5 times the IQR. Instead, they extend to the data point closest to 1.5 times the IQR in the direction of the median
+
+
+- Outliers (An outlier is a point in the dataset that falls outside of the whiskers)

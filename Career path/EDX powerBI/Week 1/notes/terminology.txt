@@ -1,0 +1,38 @@
+DataSource > (ETL with power query M) > Dataset > (DAX) > Report
+
+
+
+PowerBI data model (underlying structure of our dataset/ metadata stored as text/ JSON format/ query definition and their output/ tables, columns, measures are all contained in there)
+
+
+Dataset (data model + data)
+
+
+Tabular model (synonym of "data model", in-memory database, runs on SQL Server Analysis Services SSAS)
+
+
+Download PowerBI desktop (aka.ms/pbisingleinstaller)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,114 @@
+Missing data :
+- Missing At Random data (MAR) ==> somehow predictable or pattern existing, If the likelihood of missingness is different for different groups, but equally likely within a group, then that data is missing at random.
+
+- Missing At Completely Random data (MCAR) ==> unpredictable,  For a given variable, every observation is equally likely to be missing
+
+- Structurally Missing data (SM) ==> we expect this data to be missing for some logical reason
+
+- Missing Not At Random (MNAR) ==> we don't expect data to be missing but there is some reason why the data is missing
+
+systemetic causes = data never being provided in the first place
+
+
+
+
+
+It’s best practice to always assume that the data is MNAR and try to uncover clues as to that reason
+
+(.dropna(), .fillna())
+We could impute the data by taking the average number of steps
+We could interpolate the data by generating values based on the distribution of the existing data
+Or we could delete it without making our analysis invalid
+
+
+DELETION
+
+The big risk with deletion is that we could introduce bias, or unrepresentative data, into the dataset.
+
+1.It is either MAR or MCAR missing data. We can remove data that falls into either of these categories without affecting the rest of the data, since we assume that the data is missing at random. However, if the percentage of missing data is too high, then we can’t delete the data — we would be reducing our sample size too much. Note that every dataset or analytics use case will have a different definition of how much missing data is “too much”. For example, data used to predict credit card fraud would have a smaller tolerance for missing data than health survey data.
+2. The missing data has a low correlation with other features in the data. If the missing data is not important for what we’re doing, then we can safely remove that data (scatterplot or coeff corr)
+
+
+
+Types of deletion
+
+- Listwise : is a technique in which we remove the entire observation when there is missing data. This particular technique is usually employed when the missing variable(s) will directly impact the analysis we are trying to perform, usually with respect to MAR or MCAR missing data.
+A safe place to start is assuming that if less than 5% of data is missing, then we are safe to use listwise deletion.
+
+
+- Pairwise :  we only remove rows when there are missing values in the variables we are directly analyzing. Unlike listwise deletion, we do not care if other variables are missing, and can retain those rows.
+
+
+- dropping : There is another tactic we could employ: to drop a variable entirely. If a variable is missing enough data, then we really don’t know enough about that variable to use it in our analysis, so we can’t be confident in any conclusions we draw from it. While this may sound easier than the other solutions mentioned and possibly effective, we generally don’t want to drop entire variables. Why? In most contexts, having more data is always a good idea and we should work to retain it if possible. The more data we have, the more confidence we can have that our conclusions are actually happening, and not due to random chance. We should only drop a variable as a last resort, and if that variable is missing a very significant amount of data (at least 60%).
+
+
+SINGLE IMPUTATION
+- LOCF : Last Observation Carried Forward (df['comfort'].ffill(axis=0, inplace=True))
+
+- NOCB : Next Observation Carried Backward (df['comfort'].bfill(axis=0, inplace=True))
+
+- BOCF : Baseline Observation Carried Forward
+
+- WOCF : Worst Observation Carried Forward
+
+
+
+
+MULTIPLE IMPUTATION
+
+We replace the missing data multiple times. Multiple imputation, in particular, is used when we have missing data across multiple categorical columns in our dataset. After we have tried different values, we use an algorithm to pick the best values to replace our missing data. By doing this, we are able to, over time, find the correct value for our missing data.
+Multiple imputation is best for MAR data.
+
+
+The general process of multiple imputation follows this chart
+
+
+
+1. Assign placeholder values: For all of the missing data we have in our variables, we need to assume a value to start with. In most cases, it is best to assume a random value from within the dataset for that particular variable, as this will avoid introducing bias into the dataset.
+
+
+2. Remove missing data for one variable: We now want to isolate a particular variable's missing data, so we can remove the assumed / predicted values from this variable only.
+
+
+3. Predict values based on other variables: For our missing data, use the values in the other variables to predict what our missing data should be. This is typically done through either a regression or nearest neighbor process.
+
+
+4. Replace values in variable: Put the results of the prediction into our variable, so that we can continue the process with the new data.
+
+
+5. Go to 2 and repeat multiple time
+
+
+6. Integrate predicted values into dataset: After we have completed all of our cycles, we must gather all the predicted values, verify that they are the most accurate set we have, and then place them into the final dataset.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Typos :
+
+
+
+
+Inconsistent coding :
+
+
+
+Duplicates : df.duplicated, df.drop_duplicates
+
+
+Introduction to Data Wrangling and Tidying
+regular expression
+literals, |, [^], ., \, range [x-x], (), {}, ?(0 or 1 time), *(0 or more), +(1 or more), ^ $
+\d, \w, \s, \D, \W, \S
+
+
+Change columns and rows disposition (pd.pivot, pd.merge)

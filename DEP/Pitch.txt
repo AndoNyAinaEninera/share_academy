@@ -1,0 +1,6 @@
+Hello I am Ando from Madagascar and I live in Nederlands.
+2 years ago I was interested in coding but didn't have laptop so for me it was difficult to progress because the tools for mobile coding was not very mature.
+Despite many tools arising to serve developers coding in mobile, there is still lack of support for this community to thrive.
+We are aware that many developers specially in third world countries do not have access to laptop because of financial limits. We want to make coding more efficient and fun for everyone.
+In order to solve that kind of problem, We decided to create at first a mobile keyboard specialized for coding on smartphones or tablets, using specific layout instead of traditional QWERTY layout, we get inspiration from mobile FPS gaming layouts.
+So I hope you are seeing the huge potential of mobile coding, and download the app or donate for more efficient and more fun coding on android for everyone.

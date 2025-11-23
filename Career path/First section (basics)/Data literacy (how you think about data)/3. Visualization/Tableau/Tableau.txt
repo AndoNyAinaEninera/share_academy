@@ -1,0 +1,68 @@
+Tableau is an analytics platform.
+This makes it the place users go to see and create presentable data charts, dashboards, and stories.
+Any heavy modification or preparation of the data is generally done before it is viewed in Tableau.
+
+Free version : public.tableau.com
+
+Data preparation : tableau Prep $
+Data visualization : tableau Desktop $, tableau Public
+Sharing findings : tableau Server $, tableau Online $, public.tableau.com
+
+
+Tableau Public is one of the best places to showcase dashboards and visualizations.
+Set “Bio” as “Available For Hire” to make the most of your Tableau Public portfolio
+
+In Tableau, Microsoft Excel refers to any file with an .xls or .xlsx extension.
+Text file refers to a .csv or .txt file
+
+
+
+_________________________________________________________________________________
+		|								|
+		|								|
+		|								|
+		|			RELATIONSHIP PANEL			|
+		|								|
+		|								|
+DATA SOURCE	|								|
+		|								|
+		|________________________________________________________________
+		|				|				|
+		|				|				|
+		|	DATA METADATA		|	DATA PREVIEW		|
+		|				|				|
+		|				|				|
+_________________________________________________________________________________
+
+
+Click on sheet at the bottom left to create a new workbook
+
+
+
+Data Pane: Data fields from the active sheet/table of the data source appear here.
+
+Columns and Rows Shelf: This is where we drag fields to create a visualization. We can drag a field into either shelf to construct the columns or rows of the table, respectively.
+
+Marks Card: Here, we can choose the chart type and further stylize our viz with properties like color and size. We’ll learn more about this in the upcoming lessons.
+
+Pages Shelf: Pages allow us to break the viz into a series of views with a different view on each page. We can think of flipping through views as advancing slides in a presentation.
+
+Filters Shelf: We can use this shelf to filter out data we wish to include/exclude.
+
+
+Show Me: This menu shows suggested possible visualization types based on the selected combination(s) of data.
+
+
+Make a new sheet
+
+New DashboardCombine multiple sheets into a single dashboard
+
+New StoryCreate a story with a different sheet or dashboard on each page
+
+
+With so many visualization options in Tableau, it can be easier to create nonsense than to create a meaningful viz.
+And with the amount of data fields and marks available to us, it’s easy for the canvas to get overwhelmed or become incoherent.
+So before jumping into Tableau, let’s take a step back and sketch out our viz on a piece of paper first.
+
+
+

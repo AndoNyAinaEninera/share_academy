@@ -1,0 +1,21 @@
+- Binnig data
+As a data analyst or scientist, you will sometimes deal with numerical data that you would like to arrange into different categories.
+For example, imagine you are looking at the ages of a set of individuals.
+You might care more about the age category each person falls under (20-29, 30-39, 40-49, etc) than the exact age.
+The process of transforming numerical variables into categorical counterparts is called “binning.
+
+
+Binning data can be useful in many situations, whether it be to create more appealing visualizations or to improve a machine learning model.
+
+In areas like machine learning, binning data can be helpful to improve the accuracy of predictive models by reducing the noise of the data.
+For example, if you’re a machine learning engineer working at an investment firm, you might use binning as a technique to improve your stock prediction models by smoothing the data to reduce the impact of small, short term price changes.
+
+bins = [20, 30, 40, 50, 60, 70] or bins = 5
+dance_class['binned_age'] = pd.cut(dance_class['Age'], bins, labels=[])
+
+
+
+- Combining categorical data
+mask = election_data.isin(votes[votes < 200].index)
+election_data[mask] = 'Other'
+print(election_data['Vote'].value_counts())

@@ -1,0 +1,17 @@
+- Ultimate Business Owner
+- Trading model
+- LinkedIn job requirement
+- data science community to find ideas
+- practice + feedback make perfect
+- IDE : anaconda, PyCharm
+- churn rate model practice
+(create a model that predict if a customer is gonna leave or not ???)
+
+
+- presentation Frida kahlo
+
+- talk about thesis
+- finish all project and assessment in codecademy
+- Iaromeva demander ristourne et garanti de resultat au coach
+
+- pyspark

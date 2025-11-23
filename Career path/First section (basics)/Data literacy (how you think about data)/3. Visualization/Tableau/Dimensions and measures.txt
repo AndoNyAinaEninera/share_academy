@@ -1,0 +1,10 @@
+Dimensions, non countable : categorical and ordinal
+
+
+Measure, countable : discrete and continuous
+
+
+longitude and latitude can both be dimensions and measures
+
+You can change field name and type in the metadata section
+After changing type, you need to change dimensions/measure as well when you are in the workbook

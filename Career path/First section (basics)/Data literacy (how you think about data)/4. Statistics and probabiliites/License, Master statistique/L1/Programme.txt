@@ -1,0 +1,47 @@
+Semester 1 (Automne)
+
+Mathématiques de base
+- Calcul différentiel (dérivées, optimisation).
+- Algèbre linéaire élémentaire (vecteurs, matrices).
+
+Probabilité et statistique descriptive
+- Concepts de base (ensembles, événements, probabilités conditionnelles, Bayes).
+- Variables aléatoires, espérance, variance, distributions classiques (binomiale, uniforme…).
+- Concepts intuitifs de l’inférence.
+
+Introduction pratique à la programmation statistique (R ou Python)
+- Visualisations, simulations, travaux pratiques.
+
+
+
+Semester 2 (Printemps)
+
+Inférence statistique
+- Tests d’hypothèses, intervalles de confiance, tests z/t, p-valeurs, bootstrap.
+
+Régression linéaire simple et corrélation
+- Ajustement par moindres carrés, interprétation de coefficients.
+
+Approche computationnelle & data science
+- Exploration de cycles d’analyse de données (collection, nettoyage, modélisation, communication).
+- Initiation aux méthodes bayésiennes, MCMC, utilisation de R.
+
+Projet pratique
+- Analyse complète d’un jeu de données réel : formulation, visualisation, modélisation et interprétation.
+
+
+Harvard
+
+Stat 110 (Automne) : Introduction à la probabilité (exige une bonne maîtrise du calcul différentiel).
+
+Stat 111 (Printemps) : Introduction à l’inférence statistique 
+Medium
+Advising Programs Office
+
+D’autres options plus appliquées : Stat 100, 102, 104, mais Stat 110 et 111 sont le socle pour tous les parcours 
+Advising Programs Office
+
+
+MIT
+
+https://math.mit.edu/academics/undergrad/roadmaps.html

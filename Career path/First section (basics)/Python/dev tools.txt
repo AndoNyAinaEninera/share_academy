@@ -1,0 +1,3 @@
+- IDE
+- Virtual Environment
+- Git

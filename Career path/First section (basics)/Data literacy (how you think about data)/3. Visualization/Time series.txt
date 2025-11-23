@@ -1,0 +1,16 @@
+- Line plots
+
+plt.plot(sales_data["date"], sales_data["sales"])
+
+- Box plots
+# extract year from date column
+sales_data["year"] = sales_data["date"].dt.year
+
+# box plot grouped by year
+sns.boxplot(data=sales_data, x="year", y="sales")
+plt.show()
+
+
+- Heatmaps
+- Lag plots
+- Autocorrelation plots

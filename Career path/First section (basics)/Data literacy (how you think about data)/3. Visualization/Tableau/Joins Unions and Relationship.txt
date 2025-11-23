@@ -1,0 +1,4 @@
+Same as SQL sauf Relationship
+
+You should already have the tree-census-NYC_2015.csv data opened in the data viewer.
+If you look at the left pane you will see all the files that were in the same datasets folder

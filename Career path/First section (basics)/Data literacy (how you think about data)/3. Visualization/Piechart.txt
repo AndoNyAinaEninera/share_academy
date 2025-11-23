@@ -1,0 +1,3 @@
+plt.pie(data, labels=label_data, autopct=''%.2f%%''  stringformatting to show the proportions, explode=explode = (0.1, 0, 0) tranche la tarte)
+plt.axis('equal') => in case the pie is applati
+plt.legend(label_data)

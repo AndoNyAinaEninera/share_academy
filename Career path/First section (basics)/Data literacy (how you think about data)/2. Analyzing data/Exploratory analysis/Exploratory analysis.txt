@@ -1,2 +1,0 @@
-With exploratory analysis, we look for relationships between
-variables in our dataset

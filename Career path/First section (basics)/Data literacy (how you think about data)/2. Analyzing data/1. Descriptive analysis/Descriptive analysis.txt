@@ -1,0 +1,33 @@
+Describe and find patterns one variable at time
+
+univariate map (a map where the only variable is geographic, i.e. a map that just shows us location and distance)
+
+Nominal/Ordinal variables
+- Frequency(value_count)/Proportion(value_counts(normalize=True, dropna=True/False))/Pourcentage/Ratio
+- value_counts histogram
+- mode (df.col.value_counts.index[0], df.col.value_counts[0])
+- Barchart (sns.countplot/sns.barplot)
+- Piechart, Wafflechart, Donutchart
+(df.column_name.value_counts().plot.pie())
+
+Ordinal (data = pd.Categorical(data, [bottom, mid, top] = (correct_order), ordered=True)
+- median
+  median_index = np.median(data.cat.codes)
+  median_category = correct_order[int(median_index)]
+- percentiles/quantiles (replace np.median by np.quantile)
+- IQR
+
+if Ordinal data is evenly spaced
+- mean, (all discrete statistics)
+
+
+
+Discrete/Continous variables
+- Mean / Median / trimmed mean
+- Standard deviation / Variance / Quantiles/ IQR / Range / mean absolute deviation
+- Histogram + density curve / boxplot / violin_plot = Distribution : uniform, unimodal,  binomial, normal, skewed, bimodal, multimodal (Parfois, des distributions bimodales se produisent lorsqu'il existe des differences entre les categories d'une autre variable, the dataset has 2 different population)
+
+(sns.histplot, plt.hist(normed|density=True|False), sns.boxplot)
+
+print(home_prices.skew()) (Generally, if skewness is less than -1 or greater than 1, the distribution is highly skewed.)
+

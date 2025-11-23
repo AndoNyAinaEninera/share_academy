@@ -1,0 +1,33 @@
+- Probability
+(You can think any probability problem like taking balls or value from a box with a particular probability distribution, repeated an infinite amount of time)
+
+- Set theory
+(as set is a collection of items, each element in a set is distinct, the elements in a set are in no particular order)
+(Union, Intersection, Complement)
+(Venn diagram)
+
+- Sample spaces and event
+
+- Law of large number
+(As we flip both coins more and more, the observed proportion of times each event occurs will converge to its true probability)
+
+
+P(A∪B) == P(A or B)
+P(A∩B) == P(A and B)
+
+- Independence and dependance
+(test d'independence if P(A∪B) = P(A) * P(B))
+(tree diagram is useful to represent dependent probabilities)
+(conditional probabilities (P(A∣B) = P(A∩B) / P(A))
+
+- Mutually exclusive events and not mutually exclusive event
+
+- Addition rule *union* (ex : P(A or B)=P(A)+P(B)−P(A and B))
+- Multipication rule *simultanous event* (ex : P(A and B)=P(A)⋅P(B∣A))
+
+
+- Bayes theorem
+P(A|B) = P(A)  * P(B|A)  / P(B) 
+
+
+

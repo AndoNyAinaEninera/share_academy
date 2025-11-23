@@ -1,0 +1,11 @@
+Class {attributs | methodes} => plan de construction
+
+Constructor
+
+Objet => instance de classe
+
+
+Heritage
+
+
+Polymorphisme

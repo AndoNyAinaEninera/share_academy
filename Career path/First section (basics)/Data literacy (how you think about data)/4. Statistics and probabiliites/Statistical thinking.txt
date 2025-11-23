@@ -1,15 +1,25 @@
 Etude de cas :
 - Elaine Shoben vs StarComm Corporation on women hiring discrimination
 
-
+Tests statistiques???
 
 Others :
-- Frequency/Proportion/Pourcentage/Ratio
-- Distribution : normal, skewed, bimodal, binomial
-- Mean and Standard deviation / Median and IQR
+- Frequency(value_count)/Proportion(value_counts(normalize=True))/Pourcentage/Ratio
 
-- Distribution : normal, skewed, bimodal (Parfois, des distributions bimodales se produisent lorsqu'il existe des différences entre les catégories d'une autre variable)
+- Mean / Median / trimmed mean
+- Standard deviation / Variance / IQR / Range / mean absolute deviation
+- mode
+- Aggregate statistics
 
-- Aggregate statistics and mode
 
-- Scatterplot and correlation coefficient
+- 2 Quantitative variable
+. pearson correlation
+
+- 1 Quantitative and 1 Categorical variable
+. mean or median differences (mean 1 - mean 2)
+. side by side plots (ex: boxplots)
+. overlapping plots (ex: histograms)
+
+- 2 Categorical variable
+. contingency table
+. chi2

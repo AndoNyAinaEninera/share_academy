@@ -1,0 +1,1 @@
+The most common aggregates are SUM(), AVG(), MEDIAN(), COUNT(), and COUNTD()

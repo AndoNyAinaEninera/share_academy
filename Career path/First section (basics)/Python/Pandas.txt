@@ -1,25 +1,80 @@
 - Pandas is built on top of NumPy
 
-- NumPy Ndarray
+- NumPy Ndarray : NumPy arrays allow for fast element access and efficient data manipulation,  they are more flexible than normal Python lists
+
 - Pandas Series and DataFrames
 https://pandas.pydata.org/docs/user_guide/10min.html#viewing-data
 
-- type, len, size, info
+- the main difference between array and series is the index
 
+- lambda function
+
+- type, len, size, info, dtype, value_counts
+- astype()
+- fillna()
 
 CREATING DATA
+- creating dataframe from a dictionary
+- creating dataframe from list
 
 LOADING DATA
+- loading data from csv
+- saving data to csv
+
+INSPECTING DATA
+- df.head(), df.info(), df.describe(include='all'), df.dtypes
+- df.column.value_counts()
+
 
 SELECTING DATA
+- select column (df['column_name'])
+- select multiple columns (df[['column1', 'column2']])
+
+- select rows (df.iloc[location_index]) (df.loc[label_index])
+- slicing rows (df.iloc[index_start : index_end : pas])
+- select rows with logic (df[df['column_name'] == desired_value])
+- multiple logic (df[(df.age < 30) | (df.name == 'Martha Jones')])
+- multiple logic 2 (df.column.isin)
 
 MODIFYING DATAFRAMES
-reset_index, rename, apply(lambda x: ...), pivot
+- reset_index, rename, apply(lambda x: ...), pivot
+- add column (df['new_column_name'] = [list])
+- add column with all same value df['new_column_name'] = value
+- add column with calculation df['Sales Tax'] = df.Price * 0.075
+- add column with function df['Name'] = df.Name.apply(str.upper)
+- use apply with lambda function
+
+
+- applying lamda to with MULTIPLE columns with axis=1 argument
+
+- renaming columns
+(df.columns = ['name1', 'name2', ...])
+(df.rename (columns ={'old_column_name1': 'new_column_name1', 'old_column_name2': 'new_column_name2'}))
+
+
+SORTING DATAFRAME
+sorted_data = dataframe_name.sort_values(by=['Column Name'])
+
+
 
 AGGREGATES IN PANDAS
 mean, std, median, max, min, count, nunique, unique
 groupby
+pivot (df.pivot(columns='ColumnToPivot',
+         index='ColumnToBeRows',
+         values='ColumnToBeValues'))
+
+pivot_table (aggregate SUM/AVEREAGE/...)
+
+melt (opposite of pivot)
+
+Pivot_table
+- column labels: a column or columns of the original table to serve as column labels (or headers) for the pivot table
+- row labels: a column or columns of the original table to serve as row labels for the pivot table
+- cell values: a column or columns of the original table to provide the values for the cells of the pivot table
+- summary method: a method for taking multiple values corresponding to a single group and producing one value for the pivot table
 
 
 MULTIPLE DATAFRAMES
-merge, concat,
+. merge (inner, left, right, outer, cross)
+. concat

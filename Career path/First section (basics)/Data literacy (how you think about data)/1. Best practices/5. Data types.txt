@@ -2,3 +2,24 @@ types de variables :
 
 - numeriques (discrete, continue)
 - categorielles (nominale, ordinale, binaires)
+
+
+- change variable type to match correct type we need
+- ordinal variable == object/Lablencoding (pd.Categorical) (ordinal variables are not necessarily evenly spaced unlike discrete variables)
+- nominal variable == object/onehotencoding (get_dummies)
+- binary variable == bool
+- string variable
+
+- label encoding
+cereal['shelf'] = pd.Categorical(cereal['shelf'], ['bottom', 'mid', 'top'], ordered=True)
+
+ordered=True for ordinal
+ordered=False for nominal
+
+cereal.shelf.cat.codes (to get numbers)
+cereal.shelf = cereal.shelf.cat.codes (to label encode)
+
+
+- one hot encoding
+titanic = pd.get_dummies(data=titanic, columns=['Embarked'])
+

@@ -1,0 +1,56 @@
+With exploratory analysis, we look for relationships between
+variables in our dataset (2 variables are associated means that one value of one variable provide information about the other variable)
+
+multivariate map (It shows a basic geographical map plus an additional variable,  this example shows roughly where different pasta shapes originated in Italy)
+unsupervised machine learning techniques (clustering, PCA, ...)
+
+
+2 Numerical variables (2 Discrete/Continous)
+. covariance(np.cov()), pearson correlation(scipy.stats.pearsonr(x, y)) (for linear assosiations)
+. Scatterplot (sns.scatterplot, plt.scatter)
+. Linechart (plt.plot)
+. Barchart
+. Correlation heatmap
+
+
+
+1 Numerical and 1 Categorical variable (1 Discrete/Continous + 1 Nominal/Ordinal)
+. mean or median differences (mean1 - mean2)
+. side by side plots (ex: boxplots)
+. overlapping plots (ex: histograms)
+. barchart / side by side barchart / overlapping barchart
+. Aggregate statistics (*aggregates are calculations performed on multiple rows*)
+(groupby)
+
+
+
+
+
+2 Categorical variable (2 Nominal/Ordinal) The chi-square test ignores the ordinal nature of the data
+. contingency table (pd.crosstab)
+  contengency proportions (pd.crosstab(data.colomn1, data.column2)/len(data))
+
+Now, let’s take a moment to think about what the tables would look like if there were no association between the 
+variables. Our first instinct may be that there would be .25(25%) of the data in each of the four cells of the table, but that is not the case. We might notice that the bottom row, which corresponds to people who think they have a talent for influencing people, accounts for 0.213 + 0.399 = 0.612 (or 61.2%) of surveyed people — more than half! This means that we can expect higher proportions in the bottom row, regardless of whether the questions are associated.
+
+  marginal proportions (leader_marginals = influence_leader_prop.sum(axis=0)
+			influence_marginals =  influence_leader_prop.sum(axis=1))
+
+  expected contengency table (To calculate these expected proportions, we need to multiply the marginal proportions for each combination of categories (leader_no*influence_no, leader_yes*influence_no, leader_no*influence_yes, leader_yes*influence_yes)) : (chi2, pval, dof, expected = chi2_contingency(contengency_table)
+expected values of contingency frequency table (not proportions) should all be greater than 5, why? I don't know.
+
+. chi2 statistic (mesure le degre d'association des variables, a quel point le variables sont elles associes)
+from scipy.stats import chi2_contingency
+(chi2, pval, dof, expected = chi2_contingency(contingency_table))
+
+. Side by side (or stacked) bar plots
+
+
+Ordinal variables
+- Spearman correlation, Mann-Whitney U test, Kruskal-Wallis test
+
+
+
+Multivariate analysis : heatmap/scatterplot with visual cues, shape, color, size, .../grouped box plots (with hue)/
+multi-dimensional plots(3D scatterplot with import plotly.express as px)
+

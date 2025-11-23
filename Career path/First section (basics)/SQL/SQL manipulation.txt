@@ -13,7 +13,7 @@ Manipulation :
 );
 
 
-- INSERT INTO celebs (column_1, column_2, column_3) 
+- INSERT INTO tablename (column_1, column_2, column_3) 
   VALUES (value_column_1, value_column_2, value_column_3);
 
 - ALTER TABLE celebs
@@ -38,18 +38,26 @@ Querying :
 - ORDER BY, ORDER BY ... DESC
 - LIMIT
 - CASE (if logic)
+- CONCAT
+- IN (items1, item2, item3, ...)
 
 
 Aggregate Functions :
 - COUNT(), SUM(), MAX(), MIN(), AVG(), ROUND()
+- LEN, CAST
 - GROUP BY
 - HAVING (same as WHERE but for groups)
 - Date and time manipulation https://www.sqlite.org/lang_datefunc.html
+SELECT YEAR('2017/08/25') AS Year;
+- LAG OVER
 
 
 Multiple tables :
 - JOIN
-- INNER JOIN, LEFT (OUTTER) JOIN, RIGHT (OUTTER) JOIN, FULL (OUTTER) JOIN
+- INNER JOIN, LEFT JOIN, RIGHT JOIN, FULL (OUTER) JOIN
 - CROSS JOIN
-- UNION
+- UNION, UNION ALL
 - WITH
+
+
+Non maitriser : multiple SELECT (subquery), WITH (CTE), Window functions, DateTime manipulation

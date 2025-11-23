@@ -1,0 +1,46 @@
+- Linechart (plt.plot, multiple line in one plot, linestyles, markers, colors)
+  (We can also have multiple line plots displayed on the same set of axes. This can be very useful if we want to compare two datasets with the same scale and axis categories)
+
+plt.axis
+
+plt.xlabel, plt.ylabel, plt.title, plt.legend
+
+subplots (rows, columns, index) / figure
+plt.subplots_adjust (left, right, top, bottom, wspace, hspace)
+set_xticks, set_yticks, set_xticklabels, set_yticklabels
+
+plt.close('all')
+
+
+plt.figure(figsize=(4, 10))
+plt.savefig('name_of_graph.png') png, svg, or pdf
+
+
+
+
+
+- barchart (plt.bar, plt.errorbar, sns.countplot)
+
+side by side barchart
+#Paste the x_values code here
+n = ?  # This is our first dataset (out of 2)
+t = ? # Number of datasets
+d = ? # Number of sets of bars
+w = ? # Width of each bar
+def create_x(t, w, n, d):
+    return [t*x + w*n for x in range(d)]
+
+
+stacking barchart
+plt.bar(..., ..., bottom=data1)
+
+error bar (plt.bar(range(len(values)), values, yerr=yerr))
+fill_between
+  x_values = range(10)
+  y_values = [10, 12, 13, 13, 15, 19, 20, 22, 23, 29]
+  y_lower = [8, 10, 11, 11, 13, 17, 18, 20, 21, 27]
+  y_upper = [12, 14, 15, 15, 17, 21, 22, 24, 25, 31]
+
+  plt.fill_between(x_values, y_lower, y_upper, alpha=0.2) #this is the shaded error
+  plt.plot(x_values, y_values) #this is the line itself
+  plt.show()

@@ -1,0 +1,39 @@
+- Cells
+- computation on cells (using = sign)
+- Select range of cells (B1:C4)
+- =MAX(B2:B7), =MIN(B2:B7), =AVERAGE(B2:B7)
+- Drag formulas
+by default, excel will drag formula following the same path (same number of row/column deplacement)
+example : C2=B2/B5 => C3 becomes C3=B3/B6
+
+to place a reference cell : use $
+example : C3=B3/$B$5 ($B to place column, $5 to place row)
+
+- Errors #DIV/0! (for 0 in denominator) #VALUE! (for non numeric value)
+
+to place for a reference in another sheet we use exclamation !
+
+- Sorting data, sort by multiple column
+The way Excel deals with cells that have the same value is by maintaining the order they were already in.
+Since we’ve already sorted by date from newest to oldest, the 2/5/20 row for AL will come before the 1/11/20 row
+
+- Filter data
+
+
+- Pivot table
+. column labels: a column or columns of the original table to serve as column labels (or headers) for the pivot table
+. row labels: a column or columns of the original table to serve as row labels for the pivot table
+. cell values: a column or columns of the original table to provide the values for the cells of the pivot table
+. summary method: a method for taking multiple values corresponding to a single group and producing one value for the pivot table
+
+Select table > insert > pivot_table > select destination upperleft cell > ...
+
+
+- Refresh
+- Change data source
+
+- Copy table
+Select the table, right-click and select “copy”. Then, select the “Backup Table” sheet, select cell A1, right-click and select “Paste”.
+
+- select table
+Click the upper-left corner of the table twice to select the entire table, including the table headers. You can also click anywhere in the table, and then press CTRL+A to select the table data in the entire table, or you can click the top-left most cell in the table, and then press CTRL+SHIFT+END.

@@ -1,0 +1,87 @@
+Linear regression is a powerful modeling technique that can be used to understand the relationship between a quantitative variable and one or more other variables, sometimes with the goal of making predictions.
+
+
+The first step before fitting a linear regression model is exploratory data analysis and data visualization.
+
+equation for a line =>> y = ax + b  =>> a = slope = y/x when b is set to 0
+					    rise/run
+					    in other words, we expect that a 1 unit of difference in x is associated with 'a'(slope) additional units of y
+
+					b = y_intercept
+					    the predicted value of the outcome variable y when the predictor variable x is equal to zero
+
+
+
+- Finding the "Best" Line :
+. Error Measurement => a common choice for linear regression is ordinary least squares (OLS)
+
+. In simple OLS regression, we assume that the relationship between two variables x and y can be modeled as:
+y= ax + b + (error ±)
+
+. We define “best” as the line that minimizes the total squared error for all data points.
+
+
+. Total squared error is called the loss function in machine learning.
+loss = ∑(error ±)²
+
+. The best line that fit our data is the one that minimize loss
+That mean we need a minimisation algorithm
+
+
+
+
+- Fitting a Linear Regression Model in Python
+. There are a number of Python libraries that can be used to fit a linear regression, but in this course, we will use the OLS.from_formula() function from statsmodels.api
+statsmodels.api.OLS.from_formula()
+
+. model = sm.OLS.from_formula('ycol ~ xcol', data = dataset_name)
+. results = model.fit()
+. print(results.summary())
+. we can look at the coefficients using results.params
+. results.predict()
+
+
+. fitted value (value predicted by the model)
+. true value (value observed in the dataset)
+. residuals (error between fitted and true value)
+
+
+- Further personal hypothesis :
+. Can we compute the error (residuals) distribution to add an interval of confidence to our prediction?
+
+
+
+
+
+- Assumptions of Linear Regression
+1. Linearity : the relationship between the outcome variable and predictor is linear (can be described by a line)
+
+2. Normality : the normality assumption states that the residuals should be normally distributed if not, then this assumption is not met, check normality with histogram
+
+3. Homoscedacity : the residuals have equal variation across all values of the predictor (independent) variable. When homoscedasticity is not met, this is called heteroscedasticity, meaning that the variation in the size of the error term differs across the independent variable.
+Since a linear regression seeks to minimize residuals and gives equal weight to all observations, heteroscedasticity can lead to bias in the results.
+
+plt.scatter(fitted_value, residuals)
+
+
+
+
+CATEGORICAL PREDICTORS (y = quantitative, x = categorical(in this case binary))
+- The best fit line for this plot is the one that goes through the mean height for each group
+
+. we can actually fit the model using statsmodels.api.OLS.from_formula()
+
+. model = sm.OLS.from_formula('ycol ~ xcol', data)
+results = model.fit()
+print(results.params)
+
+
+CATEGORICAL PREDICTORS with more than 2 cathegories
+
+
+
+
+
+
+
+

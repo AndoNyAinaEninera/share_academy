@@ -1,0 +1,76 @@
+- effectuer des analyses sur plusieurs  echantillons tirees avec remise :
+(tirage avec remise)
+
+exemple :
+. analyse 1 => echantillon 1
+. remise
+. analyse 2 => echantillon 2
+. remise
+. ...
+
+si les resultats sonts coherents entre les echantillons, il est probable que la representativiter ai ete respectes
+si les resultats no sont pas coherents entre eux, la representativite n' as pas ete respectee (randomiser la selection ou prendre un echantillon plus large)
+
+=====#####===== =====#####===== =====#####===== =====#####===== =====#####===== 
+
+Sampling Distributions
+Take a bunch of random samples of fish, each of the same size (50 fish in this example)
+Calculate the sample mean for each one
+Plot a histogram of all the sample means
+
+The Central Limit Theorem (CLT) states that the sampling distribution of the mean is normally distributed as long as the population is not too skewed or the sample size is large enough. Using a sample size of n > 30 is usually a good rule of thumb, regardless of what the distribution of the population is like. If the distribution of the population is normal, the sample size can be smaller than that.
+
+
+Standard Error
+The second part of the Central Limit Theorem is:
+The sampling distribution of the mean is normally distributed, with standard deviation equal to : σ/√n
+standard error = σ/√n (with σ = the std of the population)
+
+In many instances, we cannot know the population standard deviation, so we estimate the standard error using the sample standard deviation:
+std_of_our_sample/√n
+
+- A large amount of variation would make us less confident that any individual sample mean is representative of the population; less variation would make us more confident
+
+Biaised(min/max, non corrected variance/std)/Unbiased estimators(mean/median/...)
+
+population variance =  (∑(observation−μ) **2)/n
+
+sample variance = (∑(observation−sample mean)**2)/(n-1) ==> ddof=1
+ 
+
+
+Cumulative Distribution Function (CDF)
+
+Building intuition on CLT
+It’s now time to formally define the CLT, which tells us that the sampling distribution of the mean:
+
+- is normally distributed (for large enough sample size)
+- is centered at the population mean
+- has standard deviation equal to the population standard deviation divided by the square root of the sample size. This is called Standard Error.
+
+
+How does this help the data scientist? (can also be in Inferential Analysis)
+
+In real life, the data scientist is still stuck with their one sample mean as a best guess for the population mean. However, they can leverage the CLT to estimate the standard error.
+
+Remember that the CLT tells us that the standard error can be calculated as follows:
+
+standard error = PopulationStandardDeviation/√samplesize
+
+While a researcher or data scientist probably does not know the population standard deviation, they can use the standard deviation of their sample to estimate it.
+
+standard error = MySampleStandardDeviation/√samplesize
+
+Then, leveraging the part of the CLT that says the sampling distribution is normally distributed, our data scientist can use a nifty property of normal distributions: 95% of normally distributed values are within about 1.96 standard deviations of the mean. This allows the data scientist to estimate the width of the sampling distribution above, without actually knowing the population distribution!
+
+First, the data scientist needs to multiply 1.96 by the estimated standard error: 1.96 * 1.275 = 2.50. The interpretation of this number is as follows:
+
+Imagine taking a large number of samples of size 150 from a population with the same amount of variation as in the observed sample.
+95% of those samples would be within about 2.50 dollars from the true population mean.
+Therefore, there is about a 95% probability that the observed sample mean of 17.74 is no more than 2.50 dollars away from the population mean. In other words, there is about a 95% probability that the population mean is between 15.24 and 20.24. This is referred to as a 95% confidence interval.
+
+
+
+
+
+

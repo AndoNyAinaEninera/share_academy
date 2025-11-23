@@ -1,0 +1,1 @@
+If you see an outlier in your dataset, it’s worth reporting and investigating. This data can often indicate an error in your data or an interesting insight.

@@ -1,6 +1,9 @@
-- codingame, ...
 - comment #...
 - print()
+- input()
+- virtual environment
+
+- SynthaxError, NameError, TypeError
 
 - variables (bool, string, int, float(float have limitations : https://docs.python.org/3/tutorial/floatingpoint.html))
 
@@ -9,13 +12,14 @@
 
 - control flow
 - if, else, while, for
+- if comprehension
 - break : break allows you to exit a loop when an external condition is met. Normal program execution resumes at the next statement. You can use a break statement with both for loops and while loops. In a nested loop, break will stop execution of the innermost loop
 - continue : when we only want to skip the current iteration of the loop
 - pass
-
+- match-case (same as switch-case)
 
 - strings (strings are immutable, we can’t change an individual character : try this_string[0] = "R")
-. upper, lower, title, split, join, replace, strip, format 
+. upper, lower, title, split, join, replace, strip, format , find, 
 
 
 - list
@@ -27,12 +31,19 @@ list method and manipulation :
 . append, remove, pop (removing by index), sort, sorted, insert, len, count(item) ...
 . + (concatenation), indexing, slicing,
 . zip(), list()
-
+. map()
+. filter()
 
 
 - dictionnaries (groupe d'association cle-valeurs non ordonnees)
+access key ==> diction[key]
+add a key ==> dictio[key] = value
+add multiple keys ==> dictio.update({"pantry": 22, "guest room": 25, "patio": 34})
+. get (to avoid KeyErrors), pop, .keys, .values, .items
+- set (liste non ordonnee)
 
 
+- list, dict comprehension
 
 
 
@@ -41,7 +52,7 @@ list method and manipulation :
 
 - functions
 - built-in functions vs user defined functions https://docs.python.org/3/library/functions.html
-- lambda function (one line function, usable only one time)
+- lambda function (one line function ou une function qui n a pas de nom) used for concisness and readability
 
 
 
@@ -50,14 +61,25 @@ list method and manipulation :
 with open('filename.txt') as cool_doc:
   cool_contents = cool_doc.read()
 modes = read, write, append
-- manipulating csv file, json file
-- modules et packages
+- read(), readlines(), readline(), write(),
+- csv.DictReader(), csv.DictWriter(), writeheader(), writerow()
+- json.load(), json.dump()
+
+
+
+- library, modules, packages
 
 
 
 - Programmation Oriente Objet
-
-
+. class
+. class variable (attributs)
+. class method (methodes) => always have at least 1 argument called self
+. dunder methods
+. constructors
+. instance variable
+. attribute function
+. self
 
 
 

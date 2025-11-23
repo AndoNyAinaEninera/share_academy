@@ -1,0 +1,23 @@
+- Scatterplot with visual cues 2 numerical and (colors, shapes) categorical (sizes) numerical, ...
+
+sns.scatterplot(x = 'Schooling', y = 'LifeExpectancy', hue = '3rd variable', style = '4th variable', data = health_data)
+plt.show()
+
+- Grouped boxplot (2 categorical and 1 numerical)
+sns.boxplot(x = "Education", y = "CompTotal", hue = "3rd variable", palette = "pastel", data = salary_data)
+plt.show()
+
+
+
+- Multi-dimentional plo3t
+example: 3D scatterplot
+
+# import library
+import plotly.express as px
+
+# load in iris data
+df = px.data.iris()
+
+# create 3D scatter plot
+fig = px.scatter_3d(df, x='sepal_length', y='sepal_width', z='petal_width', color='species')
+fig.show()
