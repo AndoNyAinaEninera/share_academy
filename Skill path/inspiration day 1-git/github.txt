@@ -40,6 +40,8 @@ git merge
 
 git remote
 
+git remote add origin (repository url)
+
 git push
 
 git pull
