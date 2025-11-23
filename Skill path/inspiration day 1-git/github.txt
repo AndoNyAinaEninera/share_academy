@@ -44,6 +44,8 @@ git remote add origin (repository url)
 
 git push
 
+git push --set -upstream origin master (if requested)
+
 git pull
 
 git clone git-url
